@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sorting Algorithm Visualizer</h1>
+          <div class="controls">
+            <div class="control-group">
+                <label for="arraySize">Number of Elements:</label>
+                <input type="range" id="arraySize" min="10" max="150" value="50">
+                <span id="arraySizeValue">50</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="speed">Speed:</label>
+                <input type="range" id="speed" min="1" max="100" value="50">
+            </div>
+            
+            <div class="control-group">
+                <button id="generateArray">Generate New Array</button>
+                <button id="toggleSound" class="sound-btn">🔊 Sound On</button>
+            </div>
+        </div>
+        
+        <div class="algorithms">
+            <button class="algo-btn" data-algorithm="bubble">Bubble Sort</button>
+            <button class="algo-btn" data-algorithm="selection">Selection Sort</button>
+            <button class="algo-btn" data-algorithm="insertion">Insertion Sort</button>
+            <button class="algo-btn" data-algorithm="merge">Merge Sort</button>
+            <button class="algo-btn" data-algorithm="quick">Quick Sort</button>
+        </div>
+        
+        <div class="visualization-container">
+            <div id="array-container"></div>
+        </div>
+        
+        <div class="info-container">
+            <div class="algorithm-info">
+                <h2>Algorithm Information</h2>
+                <div id="currentAlgorithm">Select an algorithm to start</div>
+                <div class="stats">
+                    <div>Comparisons: <span id="comparisons">0</span></div>
+                    <div>Swaps: <span id="swaps">0</span></div>
+                    <div>Time: <span id="time">0</span> ms</div>
+                </div>
+            </div>
+            <div class="complexity-info">
+                <h3>Time Complexity</h3>
+                <div id="timeComplexity">-</div>
+                <h3>Space Complexity</h3>
+                <div id="spaceComplexity">-</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
